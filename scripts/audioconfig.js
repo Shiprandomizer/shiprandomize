@@ -3,7 +3,6 @@
 function AudioConfig() {
     const [volume, setVolume] = React.useState(getConfig().sound.volume)
     const [file, setFile] = React.useState(getConfig().sound.file)
-    /*const [pause] = React.useState(getConfig().sound.pause)*/
 
     function handleChanged(event) {
         setVolume(event.target.value);
@@ -14,19 +13,12 @@ function AudioConfig() {
         var audio = new Audio(`assets/sounds/${config.sound.file}.mp3`);
         audio.volume = getConfig().sound.volume
         audio.play();
-            }
-
-   /*     function handleButtonPauseClick() {
-            const config = getConfig()
-            var audio = new Audio(`assets/sounds/${config.sound.file}.mp3`);
-            audio.pause();
-            }*/
+    }
 
     React.useEffect(() => {
         const config = getConfig()
         config.sound.volume = volume
         config.sound.file = file
-       /* config.sound.pause = pause*/
         storeConfig(config)
     }, [volume, file])
 
@@ -40,5 +32,5 @@ function AudioConfig() {
                 }
             </select>
             <button onClick={handleButtonPlayClick}>▶</button>
-                </div>)
+        </div>)
 }

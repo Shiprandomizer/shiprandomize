@@ -5,6 +5,7 @@ function Config() {
   const [configVisible, setConfigVisible] = React.useState(false);
   const [highlightedShips, setHighlightedShips] = React.useState([]);
   const [sortConfig, setSortConfig] = React.useState({ by: "id", order: "ascending" });
+  const [isMuted, setIsMuted] = React.useState(getConfig().sound.volume == 0);
 
   const shipTable = React.useRef()
 
@@ -142,6 +143,18 @@ function Config() {
     });
   }
 
+  function toggleMuteSound() {
+    const config = getConfig()
+    if (config.sound.volume == 0) {
+      config.sound.volume = 0.3
+      setIsMuted(false)
+    } else {
+      config.sound.volume = 0
+      setIsMuted(true)
+    }
+    storeConfig(config)
+  }
+
   React.useEffect(() => {
     if (!ships || ships.length === 0) { return }
     const config = getConfig()
@@ -175,6 +188,10 @@ function Config() {
       <div>
         <button onClick={() => setConfigVisible(p => !p)} id="toggelConfigButton" className="toggelConfigButton">
           ⚙️<span lang="de">Settings {configVisible && "(click to close config)"}</span>
+        </button>
+        <button className="toggelConfigButton" onClick={toggleMuteSound}>
+          {isMuted && <div>🔇</div>}
+          {!isMuted && <div>📢</div>}
         </button>
         <div className="config-panel" style={configVisible ? { display: "block" } : { display: "none" }}>
 
