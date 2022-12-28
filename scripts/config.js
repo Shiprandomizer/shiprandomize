@@ -43,14 +43,33 @@ function Config() {
       return [...s]
     });
   }
-  /*function changeTypeSelection(type, selected) {
+
+  function setSelectShipType(shipType, selected) {
     setShips(s => {
-      s.filter(ss => ss.type === type)
+      s.filter(ss => ss.type === shipType)
         .forEach(s => s.selected = selected);
       return [...s]
     });
   }
-*/
+
+  function mapShipToString(shipType) {
+
+    switch (shipType) {
+      case "A":
+        return "Aircraft Carrier"
+      case "B":
+        return "Battleship"
+      case "C":
+        return "Cruiser"
+      case "D":
+        return "Destroyer"
+      case "S":
+        return "Submarine"
+      default:
+        return "---"
+    }
+  }
+
   function foundShips(allFoundShips) {
     if (!allFoundShips || allFoundShips.length === 0) {
       setHighlightedShips([])
@@ -198,23 +217,31 @@ function Config() {
                 }
               </div>
               <div>
-                <span style={{ paddingLeft: "1rem" }}><p>Select Nation:    🇬🇧 🇯🇵 🇫🇷 🇺🇸 🇷🇺 🇮🇹 🇩🇪 🇳🇱 </p></span>
-                {["U.K.", "Japan", "France", "U.S.A.", "U.S.S.R.", "Italy", "Germany", "Netherlands", "Europe", "Pan-America", "Pan-Asia", ].map(t =>
-                  
+                <span><p>Select Nation:    🇬🇧 🇯🇵 🇫🇷 🇺🇸 🇷🇺 🇮🇹 🇩🇪 🇳🇱 </p></span>
+                {["U.K.", "Japan", "France", "U.S.A.", "U.S.S.R.", "Italy", "Germany", "Netherlands", "Europe", "Pan-America", "Pan-Asia",].map(t =>
+
                   <button key={t} onClick={() => changeNationSelection(t, true)}>{t}</button>
-                  
+
                 )
                 }
-               </div>
-               
-             </div>
+              </div>
+
+              <div>
+                <span><p>Select Type </p></span>
+                {["A", "B", "C", "D", "S"].map(t =>
+                  <button key={t} onClick={() => setSelectShipType(t, true)}>{mapShipToString(t)}</button>
+                )
+                }
+              </div>
+
+            </div>
             <Profile onSetSelectShipIds={ds => { setSelectedShipByIds(ds) }} onGetSelectedShipIdsRequest={getSelectedShipIds} ></Profile>
           </div>
           <div className="ship-list">
             <table>
               <thead>
-                <tr>                  
-                  {["Id","", "Name", "Nation", "Tier", "Kind", "Type"].map(t =>
+                <tr>
+                  {["Id", "", "Name", "Nation", "Tier", "Kind", "Type"].map(t =>
                     <th onClick={() => handleTableHeadClick(t.toLocaleLowerCase())}>{t}
                       <UpDown name={t.toLocaleLowerCase()}></UpDown>
                     </th>
