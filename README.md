@@ -2,7 +2,7 @@
 
 A simple random ship selector for **World of Warships**
 
-<https://marklechtermann.github.io/shiprandomizer/>
+<https://christophsteinberg.github.io/shiprandomizer/>
 
 ## Run local
 
