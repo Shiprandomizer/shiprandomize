@@ -196,7 +196,7 @@ function Config() {
         <div className="config-panel" style={configVisible ? { display: "block" } : { display: "none" }}>
 
           <div className="config-header">
-            <AudioConfig></AudioConfig>
+            {/* <AudioConfig></AudioConfig> */}
             <Search foundShips={(s) => { foundShips(s) }}></Search>
 
             <div className="ship-config">
