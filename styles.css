@@ -221,7 +221,7 @@ body {
   right: 0;
   top: 0;
   bottom: 0;
-  width: 600px;
+  width: auto;
   overflow: auto;
 }
 
@@ -242,7 +242,7 @@ body {
   overflow-y: auto;
 }
 
-.side-panel-toggle {
+.description-panel-toggle {
   width: 40px;
   height: 40px;
   flex-shrink: 0;
@@ -257,7 +257,7 @@ body {
   cursor: pointer;
 }
 
-.side-panel-toggle:hover {
+.description-panel-toggle:hover {
   background: #08df25;
 }
 
@@ -266,7 +266,7 @@ body {
 }
 
 .side-panel {
-  display: none;
+  display: initial;
   width: 400px;
   height: 480px;
   flex-shrink: 0;
@@ -276,17 +276,6 @@ body {
   box-shadow: 0 0 20px rgba(0, 0, 0, 1.35);
 }
 
-.side-panel-open .side-panel {
-  display: initial;
-}
-
-.side-panel-open .sp-icon-open {
-  display: none !important;
-}
-
-.side-panel-open .sp-icon-close {
-  display: initial !important;
-}
 .button {
   background-color: #003a91; /* Grün */
   border: none;
