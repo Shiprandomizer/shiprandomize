@@ -14,7 +14,6 @@ class Randomizer {
     this.#interval = setInterval(() => {
       const shipsToChoose = this.ships
         .filter((s) => s.selected)
-        .map((s) => s.name);
       const random = Math.floor(Math.random() * shipsToChoose.length);
       if (this.changeShipHandler != null) {
         this.changeShipHandler(shipsToChoose[random]);

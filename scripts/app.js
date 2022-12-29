@@ -35,8 +35,11 @@ function App() {
 
       <div className="content">
         <div className="panel">
-          <div className="ship">
-            {currentShip}
+          <div className="ship-name">
+            {currentShip.name}
+          </div>
+          <div className="ship-nation">
+            {currentShip.nation}
           </div>
           <div className="control">
             <button onClick={goHandler} disabled={running} className="go"></button>
