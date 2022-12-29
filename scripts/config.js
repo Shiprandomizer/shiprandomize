@@ -185,122 +185,120 @@ function Config() {
 
   return (
     <div>
-      <div>
-        <button onClick={() => setConfigVisible(p => !p)} id="toggelConfigButton" className="toggelConfigButton">
-          ⚙️<span lang="de">Settings {configVisible && "(click to close config)"}</span>
-        </button>
-        <button className="toggelConfigButton" onClick={toggleMuteSound}>
-          {isMuted && <div>🔇</div>}
-          {!isMuted && <div>📢</div>}
-        </button>
-        <div className="config-panel" style={configVisible ? { display: "block" } : { display: "none" }}>
+      <button onClick={() => setConfigVisible(p => !p)} id="toggelConfigButton" className="toggelConfigButton">
+        ⚙️<span lang="de">Settings {configVisible && "(click to close config)"}</span>
+      </button>
+      <button className="toggelConfigButton" onClick={toggleMuteSound}>
+        {isMuted && <div>🔇</div>}
+        {!isMuted && <div>📢</div>}
+      </button>
+      <div className="config-panel" style={configVisible ? { display: "block" } : { display: "none" }}>
 
-          <div className="config-header">
-            {/* <AudioConfig></AudioConfig> */}
-            <Search foundShips={(s) => { foundShips(s) }}></Search>
+        <div className="config-header">
+          {/* <AudioConfig></AudioConfig> */}
+          <Search foundShips={(s) => { foundShips(s) }}></Search>
 
-            <div className="ship-config">
+          <div className="ship-config">
 
-              <div>
-                <button
-                  style={{ width: "100px" }}
-                  onClick={() => {
-                    setAllSelectionState(true);
-                  }}
-                >
-                  select all
-                </button>
+            <div>
+              <button
+                style={{ width: "100px" }}
+                onClick={() => {
+                  setAllSelectionState(true);
+                }}
+              >
+                select all
+              </button>
 
-                <span style={{ display: "inline-block", width: "100px", paddingLeft: "1rem" }}>Select Tier:</span>
-                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map(t =>
-                  <button key={t} onClick={() => changeTierSelection(t, true)}>{t}</button>
-                )
-                }
-              </div>
-
-              <div>
-                <button
-                  style={{ width: "100px" }}
-                  onClick={() => {
-                    setAllSelectionState(false);
-                  }}>
-                  unselect all
-                </button>
-
-                <span style={{ display: "inline-block", width: "100px", paddingLeft: "1rem" }}>Unselect Tier:</span>
-                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map(t =>
-                  <button key={t} onClick={() => changeTierSelection(t, false)}>{t}</button>
-                )
-                }
-              </div>
-              <div>
-                <span><p>Select Nation:    🇬🇧 🇯🇵 🇫🇷 🇺🇸 🇷🇺 🇮🇹 🇩🇪 🇳🇱 </p></span>
-                {["U.K.", "Japan", "France", "U.S.A.", "U.S.S.R.", "Italy", "Germany", "Netherlands", "Europe", "Pan-America", "Pan-Asia",].map(t =>
-
-                  <button key={t} onClick={() => changeNationSelection(t, true)}>{t}</button>
-
-                )
-                }
-              </div>
-
-              <div>
-                <span><p>Select Type </p></span>
-                {["A", "B", "C", "D", "S"].map(t =>
-                  <button key={t} onClick={() => setSelectShipType(t, true)}>{mapShipToString(t)}</button>
-                )
-                }
-              </div>
-
+              <span style={{ display: "inline-block", width: "100px", paddingLeft: "1rem" }}>Select Tier:</span>
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map(t =>
+                <button key={t} onClick={() => changeTierSelection(t, true)}>{t}</button>
+              )
+              }
             </div>
-            <Profile onSetSelectShipIds={ds => { setSelectedShipByIds(ds) }} onGetSelectedShipIdsRequest={getSelectedShipIds} ></Profile>
+
+            <div>
+              <button
+                style={{ width: "100px" }}
+                onClick={() => {
+                  setAllSelectionState(false);
+                }}>
+                unselect all
+              </button>
+
+              <span style={{ display: "inline-block", width: "100px", paddingLeft: "1rem" }}>Unselect Tier:</span>
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map(t =>
+                <button key={t} onClick={() => changeTierSelection(t, false)}>{t}</button>
+              )
+              }
+            </div>
+            <div>
+              <span><p>Select Nation:    🇬🇧 🇯🇵 🇫🇷 🇺🇸 🇷🇺 🇮🇹 🇩🇪 🇳🇱 </p></span>
+              {["U.K.", "Japan", "France", "U.S.A.", "U.S.S.R.", "Italy", "Germany", "Netherlands", "Europe", "Pan-America", "Pan-Asia",].map(t =>
+
+                <button key={t} onClick={() => changeNationSelection(t, true)}>{t}</button>
+
+              )
+              }
+            </div>
+
+            <div>
+              <span><p>Select Type </p></span>
+              {["A", "B", "C", "D", "S"].map(t =>
+                <button key={t} onClick={() => setSelectShipType(t, true)}>{mapShipToString(t)}</button>
+              )
+              }
+            </div>
+
           </div>
-          <div className="ship-list">
-            <table>
-              <thead>
-                <tr>
-                  {["Id", "", "Name", "Nation", "Tier", "Kind", "Type"].map(t =>
-                    <th onClick={() => handleTableHeadClick(t.toLocaleLowerCase())}>{t}
-                      <UpDown name={t.toLocaleLowerCase()}></UpDown>
-                    </th>
-                  )}
+          <Profile onSetSelectShipIds={ds => { setSelectedShipByIds(ds) }} onGetSelectedShipIdsRequest={getSelectedShipIds} ></Profile>
+        </div>
+        <div className="ship-list">
+          <table>
+            <thead>
+              <tr>
+                {["Id", "", "Name", "Nation", "Tier", "Kind", "Type"].map(t =>
+                  <th onClick={() => handleTableHeadClick(t.toLocaleLowerCase())}>{t}
+                    <UpDown name={t.toLocaleLowerCase()}></UpDown>
+                  </th>
+                )}
+              </tr>
+            </thead>
+            <tbody ref={shipTable}>
+              {ships.map((s) => (
+                <tr key={s.id} data-id={s.id} >
+                  <td>
+                    {s.id}.
+                  </td>
+                  <td>
+                    <input
+                      id={s.id}
+                      type="checkbox"
+                      checked={s.selected}
+                      onChange={() => onListItemChanged(s.id)}
+                      name={s.id}
+                    />
+                  </td>
+                  <td className={isShipHighlighted(s.id) ? "highlighted-row" : ""}>
+                    <label htmlFor={s.id}>{s.name}</label>
+                  </td>
+                  <td>
+                    <label htmlFor={s.id}>{s.nation}</label>
+                  </td>
+                  <td>
+                    <label htmlFor={s.id}>{s.tier}</label>
+                  </td>
+                  <td>
+                    <label htmlFor={s.id}>{s.kind}</label>
+                  </td>
+                  <td>
+                    <label htmlFor={s.id}>{mapType(s.type)}</label>
+                  </td>
                 </tr>
-              </thead>
-              <tbody ref={shipTable}>
-                {ships.map((s) => (
-                  <tr key={s.id} data-id={s.id} >
-                    <td>
-                      {s.id}.
-                    </td>
-                    <td>
-                      <input
-                        id={s.id}
-                        type="checkbox"
-                        checked={s.selected}
-                        onChange={() => onListItemChanged(s.id)}
-                        name={s.id}
-                      />
-                    </td>
-                    <td className={isShipHighlighted(s.id) ? "highlighted-row" : ""}>
-                      <label htmlFor={s.id}>{s.name}</label>
-                    </td>
-                    <td>
-                      <label htmlFor={s.id}>{s.nation}</label>
-                    </td>
-                    <td>
-                      <label htmlFor={s.id}>{s.tier}</label>
-                    </td>
-                    <td>
-                      <label htmlFor={s.id}>{s.kind}</label>
-                    </td>
-                    <td>
-                      <label htmlFor={s.id}>{mapType(s.type)}</label>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div >
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div >
     </div >
   );

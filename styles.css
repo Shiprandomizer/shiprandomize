@@ -11,7 +11,6 @@ html {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-
 blocksatz {
   text-align: center;
 }
@@ -79,8 +78,10 @@ input[type="text"] {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed; top: 30%; left: 46%;
-  
+  position: fixed;
+  top: 30%;
+  left: 46%;
+
   margin: -50px 0 0 -50px;
 }
 
@@ -110,6 +111,7 @@ select {
   background-color: #3e8e41;
 }
 .config-panel {
+  z-index: 99;
   margin: 1rem;
   padding: 1rem;
   position: absolute;
@@ -118,7 +120,9 @@ select {
   box-shadow: rgba(0, 0, 0, 0.9) 0px 22px 70px 4px;
 }
 button.go {
-  position: fixed; top: 50%; left: 50%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
   background-image: url("assets/images/button_go.png");
   border-radius: 108px;
   border: -1px double #cccccc;
@@ -132,7 +136,9 @@ button.go {
 }
 
 button.go:disabled {
-  position: fixed; top: 50%; left: 50%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
   background-image: url("assets/images/radar.gif");
   border-radius: 108px;
   border: 1px double #cccccc;
