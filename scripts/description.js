@@ -15,8 +15,7 @@ function Description() {
             <div class="wrapper side-panel-open">
                 <button onClick={() => { toggleVisibility() }} class="side-panel-toggle" type="button">
                     <span class="material-icons sp-icon-open">question_mark</span>
-                    <span class="material-icons sp-icon-close"
-                    >keyboard_double_arrow_left</span
+                    <span class="material-icons sp-icon-close">❔</span
                     >
                 </button>
                 {visible &&
