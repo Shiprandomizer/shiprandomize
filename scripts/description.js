@@ -32,6 +32,7 @@ function Description() {
                         </p>
                         <p>Your settings will be saved.</p>
                         <p>A free community project for World of Warships (TM)</p>
+                        <p>Contact: graf_de90@gmail.com - twitch.tv/Graf_d</p>
                         <p>(c) 2022 HighTower & Graf_d</p>
                     </div>
                 }
