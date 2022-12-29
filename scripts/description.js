@@ -9,8 +9,6 @@ function Description() {
     return (
         <div>
             <div>
-                {open && <div>ooooo</div>}
-                {!open && <div>close</div>}
                 <div class={open ? "description-panel-open side-panel-open" : "description-panel-closed side-panel-closed"}>
                     <button onClick={() => { toggleVisibility() }} class="side-panel-toggle" type="button">
                         <span class="">❔</span
