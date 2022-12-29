@@ -35,7 +35,7 @@ function Description() {
                         <p>Contact: graf_de90@gmail.com - twitch.tv/Graf_d</p>
                         <p>(c) 2022 HighTower & Graf_d</p>
                         <a href="https://www.paypal.com/donate?hosted_button_id=E2WXMLBC7FBQE" target="_blank">
-                        <button class="button">Kleine Spende für Webhosting</button></a>
+                        <button class="button">a small donation for webhosting would make me happy 🙃</button></a>
                     </div>
                 }
             </div>
