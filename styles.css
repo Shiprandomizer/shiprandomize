@@ -55,6 +55,18 @@ input[type="text"] {
   height: 1.5rem;
 }
 
+/* button.back-to-top {
+    position: fixed;
+    top: 120px;
+    left: 680px;
+    background-color: rgb(3, 30, 146);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  } */
+/* Back to Top Button Style */
+
 .content {
   display: flex;
   justify-content: center;
