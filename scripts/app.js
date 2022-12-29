@@ -32,19 +32,20 @@ function App() {
   return (
     <div>
       <Config></Config>
+
       <div className="content">
         <div className="panel">
-          <div className="ship" id="ship">
+          <div className="ship">
             {currentShip}
           </div>
-          <div className="ship" id="ship" style={{ position: "static", overflow: "hidden" }}>
-          </div>
           <div className="control">
-            <button onClick={goHandler} disabled={running} className="go" id="go"></button>
+            <button onClick={goHandler} disabled={running} className="go"></button>
           </div>
         </div>
       </div>
+
       <Description></Description>
-    </div>
+
+    </div >
   );
 }

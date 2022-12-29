@@ -209,7 +209,18 @@ body {
   line-height: 1.5;
 }
 
-.wrapper {
+.description-panel-closed {
+  display: flex;
+  height: 100px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 600px;
+  overflow: auto;
+}
+
+.description-panel-open {
   display: flex;
   height: 100vh;
   position: fixed;
