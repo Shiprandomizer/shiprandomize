@@ -76,7 +76,7 @@ input[type="text"] {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  background-image: linear-gradient(to right, #ff0000, #ffff00);
+  background-image: linear-gradient(to right, #806c16, #ffd30fc2);
   -webkit-text-fill-color: transparent;
   color: rgb(208, 255, 0);
   height: 100px;
