@@ -132,6 +132,7 @@ button.go:disabled {
   box-shadow: rgba(0, 0, 0, 0.9) 0px 22px 70px 4px;
 }
 button.go {
+  position: fixed; top: 280px; right: 790px;
   background-image: url("assets/images/button_go.png");
   border-radius: 108px;
   border: -1px double #cccccc;
@@ -145,6 +146,7 @@ button.go {
 }
 
 button.go:disabled {
+  position: fixed; top: 280px; right: 790px;
   background-image: url("assets/images/radar.gif");
   border-radius: 108px;
   border: 1px double #cccccc;
