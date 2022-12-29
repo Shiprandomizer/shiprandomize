@@ -11,6 +11,7 @@ html {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
 blocksatz {
   text-align: center;
 }
@@ -102,6 +103,9 @@ select {
   background-color: var(--control-background);
 }
 
+.button:hover {
+  background-color: #3e8e41;
+}
 /*button.go:hover {
   background-color: #6643b5;
   border: none;
@@ -266,4 +270,20 @@ body {
 
 .side-panel-open .sp-icon-close {
   display: initial !important;
+}
+.button {
+  background-color: #003a91; /* Grün */
+  border: none;
+  color: white;
+  padding: 15px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #3e8e41;
 }
