@@ -11,7 +11,7 @@ function AudioConfig() {
     function handleButtonPlayClick() {
         const config = getConfig()
         var audio = new Audio(`assets/sounds/${config.sound.file}.mp3`);
-        audio.volume = getConfig().sound.volume
+        audio.volume = config.sound.volume
         audio.play();
     }
 

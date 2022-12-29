@@ -14,7 +14,7 @@ function App() {
     randomizer.current.changeShipHandler = (ship) => { setCurrentShip(ship); }
     randomizer.current.randomizerStoppedHandler = () => {
       var audio = new Audio(`assets/sounds/${config.sound.file}.mp3`);
-      audio.volume = config.sound.volume
+      audio.volume = config.sound ? config.sound.volume : 0.3
       audio.play();
 
       jsConfetti.current.addConfetti({
@@ -36,10 +36,10 @@ function App() {
       <div className="content">
         <div className="panel">
           <div className="ship-name">
-            {currentShip.name}
+            {currentShip ? currentShip.name : ""}
           </div>
           <div className="ship-nation">
-            {currentShip.nation}
+            {currentShip ? currentShip.nation : ""}
           </div>
           <div className="control">
             <button onClick={goHandler} disabled={running} className="go"></button>
