@@ -35,8 +35,12 @@ function App() {
       <div className="content">
         <div className="panel">
           <div className="ship" id="ship">
-            {currentShip}
+          {currentShip}
           </div>
+
+          <div className="ship" id="ship" style={{ position: "static", overflow: "hidden" }}>
+  
+    </div>
           <div className="control">
             <button onClick={goHandler} disabled={running} className="go" id="go"></button>
           </div>
