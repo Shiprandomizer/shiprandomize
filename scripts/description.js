@@ -34,7 +34,7 @@ function Description() {
                         <p>Contact: graf_de90@gmail.com - twitch.tv/Graf_d</p>
                         <p>(c) 2022 HighTower & Graf_d</p>
                         <a href="https://www.tipeeestream.com/graf_d/donation" target="_blank">
-                        <button class="button">a small donation for webhosting would make me happy 🙃</button></a>
+                            <button class="button">a small donation for webhosting would make me happy 🙃</button></a>
                     </div>
                 }
             </div>
