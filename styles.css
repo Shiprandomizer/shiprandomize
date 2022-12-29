@@ -115,15 +115,17 @@ select {
 .button:hover {
   background-color: #3e8e41;
 }
+
 .config-panel {
   z-index: 99;
   margin: 1rem;
   padding: 1rem;
   position: absolute;
   background-color: var(--config-background);
-  width: 600px;
+  width: 580px;
   box-shadow: rgba(0, 0, 0, 0.9) 0px 22px 70px 4px;
 }
+
 button.go {
   position: fixed;
   top: 50%;
@@ -156,13 +158,62 @@ button.go:disabled {
   margin: -50px 0 0 -50px;
 }
 
-/*Hover button added by Graf_d*/
+.config-button-panel {
+  z-index: 99;
+  cursor: pointer;
+  width: 50px;
+  margin-top: 18px;
+}
 
-.toggelConfigButton {
-  background-color: transparent;
+.config-button-panel-open {
+  position: absolute;
+  left: 628px;
+}
+
+.config-button-toggle {
+  background: hsl(0, 0%, 30%);
   border: none;
-  font-size: 1rem;
-  color: white;
+  border-radius: 0 5px 0 0;
+  outline: none;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  color: #ffffff;
+}
+
+.mute-button-toggle {
+  background: hsl(0, 0%, 30%);
+  border: none;
+  border-radius: 0 0 5px 0;
+  outline: none;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  color: #ffffff;
+}
+
+.description-panel-toggle {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  background: hsl(0, 0%, 30%);
+  border: none;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+.description-panel-toggle:hover {
+  background: #08df25;
 }
 
 .config-section {
@@ -214,25 +265,25 @@ body {
   line-height: 1.5;
 }
 
-.description-panel-closed {
+.description-panel {
   display: flex;
-  height: 100px;
   position: fixed;
   right: 0;
   top: 0;
   bottom: 0;
+  overflow: auto;
+  margin-top: 18px;
+}
+
+.description-panel-closed {
+  height: 100px;
   width: auto;
   overflow: auto;
 }
 
 .description-panel-open {
-  display: flex;
   height: 100vh;
-  position: fixed;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 600px;
+  width: 500px;
   overflow: auto;
 }
 
@@ -240,25 +291,6 @@ body {
   flex-grow: 1;
   padding: 20px;
   overflow-y: auto;
-}
-
-.description-panel-toggle {
-  width: 40px;
-  height: 40px;
-  flex-shrink: 0;
-  display: grid;
-  place-items: center;
-
-  color: #ffffff;
-  background: rgb(64, 66, 87);
-  border: none;
-  border-radius: 5px 0 0 5px;
-  outline: none;
-  cursor: pointer;
-}
-
-.description-panel-toggle:hover {
-  background: #08df25;
 }
 
 .sp-icon-close {

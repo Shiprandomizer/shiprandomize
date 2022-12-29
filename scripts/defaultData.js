@@ -14,6 +14,7 @@
 const defaultConfig = {
   version: 3,
   configVisible: true,
+  descriptionVisible: true,
   sound: {
     volume: 0.3,
     file: "explosion1"

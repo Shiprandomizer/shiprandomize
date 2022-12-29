@@ -185,15 +185,16 @@ function Config() {
 
   return (
     <div>
-      <button onClick={() => setConfigVisible(p => !p)} id="toggelConfigButton" className="toggelConfigButton">
-        ⚙️<span lang="de">Settings {configVisible && "(click to close config)"}</span>
-      </button>
-      <button className="toggelConfigButton" onClick={toggleMuteSound}>
-        {isMuted && <div>🔇</div>}
-        {!isMuted && <div>📢</div>}
-      </button>
+      <div class={configVisible ? "config-button-panel config-button-panel-open" : "config-button-panel"}>
+        <button onClick={() => setConfigVisible(p => !p)} className="config-button-toggle">
+          {configVisible ? "◀" : "⚙️"}
+        </button>
+        <button className="mute-button-toggle" onClick={toggleMuteSound}>
+          {isMuted && <div>🔇</div>}
+          {!isMuted && <div>📢</div>}
+        </button>
+      </div>
       <div className="config-panel" style={configVisible ? { display: "block" } : { display: "none" }}>
-
         <div className="config-header">
           {/* <AudioConfig></AudioConfig> */}
           <Search foundShips={(s) => { foundShips(s) }}></Search>
