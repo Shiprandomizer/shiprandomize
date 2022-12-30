@@ -33,7 +33,7 @@ function Description() {
                                 To change the settngs click on the setting icon (⚙️) on the left site.
                             </p>
                             <p>A free community project for World of Warships (TM)</p>
-                            <p>Contact: graf_de90@gmail.com - twitch.tv/Graf_d</p>
+                            <p>Contact: graf_d@shiprandomizer.de - twitch.tv/Graf_d</p>
                             <p><b>(c) 2022 HighTower & Graf_d</b></p>
                             <a href="https://www.tipeeestream.com/graf_d/donation" target="_blank">
                                 <button class="button">a small donation for webhosting would make me happy 🙃</button></a>
