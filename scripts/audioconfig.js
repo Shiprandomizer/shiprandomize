@@ -26,7 +26,7 @@ function AudioConfig() {
         <div className="config-section">
             <span><small>Volume:</small></span><input type="range" min="0" max="1" step="0.05" value={volume} onChange={(e) => { handleChanged(e) }} />
             <select style={{ margin: "2 2" }} value={file} onChange={(s) => setFile(s.target.value)}>
-                {["explosion1", "explosion2",].map(s =>
+                {["explosion1",].map(s =>
                     <option key={s} value={s}>{s}</option>
                 )
                 }
