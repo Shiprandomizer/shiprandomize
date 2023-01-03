@@ -13,11 +13,11 @@ import { Config } from "../models/Config";
 
 const DefaultConfig: Config = {
   version: 3,
-  configVisible: true,
-  descriptionVisible: true,
+  configVisible: false,
+  descriptionVisible: false,
   sound: {
     volume: 0.3,
-    file: "explosion1",
+    file: "bell",
   },
   sort: {
     by: "id",
