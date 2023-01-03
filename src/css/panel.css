@@ -1,0 +1,144 @@
+.panel {
+  position: fixed;
+  width: 550px;
+  background-color: var(--play-panel-background-color);
+}
+
+.side-panel-left {
+  z-index: 50;
+  margin: 1rem;
+  padding: 1rem;  
+  position: absolute;
+  background-color: var(--panel-background-darker-color);
+  max-width: 580px;
+  box-shadow: var(--shadow);
+}
+
+.side-panel-right {
+  z-index: 101;
+  height: 100vh;
+  max-width: 500px;
+  display: flex;
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: auto;
+  padding: 1rem;
+  margin: 1rem;
+  color: var(--foreground-color);
+  background: var(--panel-background-dark-color);
+  box-shadow: var(--shadow);
+  max-height: 480px;
+}
+
+.side-panel-button-group-right {
+  z-index: 35;
+  position: fixed;
+  cursor: pointer;
+  width: 40px;
+  margin-top: 18px;
+}
+
+.side-panel-button-group-left {
+  position: fixed;
+  cursor: pointer;
+  width: 40px;
+  margin-top: 18px;
+}
+
+.side-panel-button-group-left-open {
+  z-index: 50;
+  left: 628px;
+}
+
+.side-panel-button-group-right-closed {
+  right: 0px;
+}
+
+.side-panel-button-group-right-open {
+  right: 545px;
+  z-index: 55;
+}
+
+.side-panel-button {
+  border: none;
+  background: var(--panel-button-background-darker-color);
+  color: var(--foreground-color);
+  margin: 0;
+  place-items: center;
+  display: grid;
+  outline: none;
+  width: 40px;
+  height: 40px;
+}
+
+.side-panel-button-toggle-left {
+  border-radius: 0 5px 0 0;
+}
+
+.side-panel-button-mute-toggle-left {
+  border-radius: 0 0 5px 0;
+}
+
+.side-panel-button-toggle-right {
+  border-radius: 5px 0 0 5px;
+}
+
+.side-panel-closed {
+  display: none;
+}
+
+.info-panel {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  width: 260px;
+  height: 90px;
+  background-color: var(--panel-background-dark-color);
+  display: block; 
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  border: 2px double var(--foreground-color); 
+  display: block; 
+  text-align: center; 
+}
+
+.info-panel img {
+  float: left;
+  margin-top: 4px; 
+  margin-left: 4px;
+  border-radius: 10%; 
+  border: 2px double var(--foreground-color);
+}
+
+/* small */
+@media (max-width: 700px) {
+  .panel {
+    width: 100%;
+  }
+
+  .side-panel-left {
+    width: calc(100% - 85px);
+    max-width: none;
+    padding: 1rem;
+  }
+
+  .side-panel-right {
+    position: relative;
+    height: auto;
+    margin-left: 40px;
+    max-width: calc(100% - 40px);
+    height: calc(100% - 80px);
+  }
+  
+  .side-panel-button-group-left-open {
+    position: fixed;
+    right: 0px;
+    left: auto;
+  }
+
+  .side-panel-button-group-right-open {
+    left: 0px;
+  }
+}

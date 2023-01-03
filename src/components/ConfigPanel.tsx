@@ -18,7 +18,7 @@ import { ConfigContext } from "../App";
 function ConfigPanel() {
   const [config, setConfig] = useContext(ConfigContext);
   const [ships, setShips] = useState<Ship[]>([]);
-  const [configVisible, setConfigVisible] = useState(false);
+  const [open, setOpen] = useState(false);
   const [highlightedShips, setHighlightedShips] = useState<number[]>([]);
   const [sortConfig, setSortConfig] = useState({
     by: "id",
@@ -32,7 +32,7 @@ function ConfigPanel() {
 
   useEffect(() => {
     setShips(config.ships);
-    setConfigVisible(config.configVisible);
+    setOpen(config.configVisible);
     setSortConfig(config.sort);
   }, []);
 
@@ -42,10 +42,10 @@ function ConfigPanel() {
     }
     const newConfig = { ...config };
     newConfig.ships = ships;
-    newConfig.configVisible = configVisible;
+    newConfig.configVisible = open;
     newConfig.sort = sortConfig;
     setConfig(newConfig);
-  }, [ships, configVisible, sortConfig]);
+  }, [ships, open, sortConfig]);
 
   useEffect(() => {
     if (!ships || ships.length === 0) {
@@ -195,25 +195,22 @@ function ConfigPanel() {
     <div>
       <div
         className={
-          configVisible
-            ? "side-button-panel-left side-button-panel-left-open"
-            : "side-button-panel-left"
+          open
+            ? "side-panel-button-group-left side-panel-button-group-left-open"
+            : "side-panel-button-group-left"
         }
       >
-        <button
-          onClick={() => setConfigVisible((p) => !p)}
-          className="config-button-toggle"
-        >
-          {configVisible ? "◀" : "⚙️"}
+        <button className="side-panel-button side-panel-button-toggle-left" onClick={() => setOpen((p) => !p)} >
+          {open ? "◀" : "⚙️"}
         </button>
-        <button className="mute-button-toggle" onClick={toggleMuteSound}>
+        <button className="side-panel-button side-panel-button-mute-toggle-left" onClick={toggleMuteSound}>
           {isMuted && <div>🔇</div>}
           {!isMuted && <div>📢</div>}
         </button>
       </div>
       <div
-        className="config-panel"
-        style={configVisible ? { display: "block" } : { display: "none" }}
+        className={open ? "side-panel-left" : "side-panel-left side-panel-closed"}
+        style={open ? { display: "block" } : { display: "none" }}
       >
         <div className="config-header">
           <Search

@@ -1,14 +1,14 @@
 import { createContext } from "react";
 import useConfig from "./hooks/useConfig";
 import ConfigPanel from "./components/ConfigPanel";
-import Description from "./components/Description";
+import DescriptionPanel from "./components/DescriptionPanel";
 import DefaultConfig from "./service/DefaultConfig";
 import { Config } from "./models/Config";
 import PlayPanel from "./components/PlayPanel";
 
 type ConfigContextType = [config: Config, setConfig: (config: Config) => void];
 
-const defaultValue: ConfigContextType = [DefaultConfig, (config: Config) => {}];
+const defaultValue: ConfigContextType = [DefaultConfig, (config: Config) => { }];
 
 export const ConfigContext = createContext<ConfigContextType>(defaultValue);
 
@@ -19,7 +19,7 @@ function App() {
       <div>
         <PlayPanel />
         <ConfigPanel />
-        <Description />
+        <DescriptionPanel />
       </div>
     </ConfigContext.Provider>
   );
