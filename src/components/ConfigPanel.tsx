@@ -6,10 +6,10 @@ import {
   Tier,
   ShipType,
   shipTypeToString,
-  ShipTypeValues,
-  TierValues,
+  ShipTypes,
+  Tiers,
   NationValues,
-  FieldValues,
+  Fields,
 } from "../models/Config";
 import Search from "./Search";
 import Profile from "./Profile";
@@ -232,7 +232,7 @@ function ConfigPanel() {
                 </span>
               </div>
               <button onClick={() => { setAllSelectionState(true); }} >all</button>
-              {TierValues.map((t) => (
+              {Tiers.map((t) => (
                 <button
                   key={t}
                   onClick={() => changeTierSelection(t, true)}
@@ -254,7 +254,7 @@ function ConfigPanel() {
                 </span>
               </div>
               <button onClick={() => { setAllSelectionState(false); }} >all</button>
-              {TierValues.map((t) => (
+              {Tiers.map((t) => (
                 <button
                   key={t}
                   onClick={() => changeTierSelection(t, false)}
@@ -273,7 +273,7 @@ function ConfigPanel() {
                 ))}
               </div>
               <div style={{ marginTop: "1rem" }}>
-                {ShipTypeValues.map((t) => (
+                {ShipTypes.map((t) => (
                   <button key={t} onClick={() => setSelectShipType(t, true)}>
                     {shipTypeToString(t)}
                   </button>
@@ -293,7 +293,7 @@ function ConfigPanel() {
           <table>
             <thead>
               <tr>
-                {FieldValues.map((t) => (
+                {Fields.map((t) => (
                   <th
                     className={t === "Id" || t === "Name" ? "" : "detail"}
                     key={t}

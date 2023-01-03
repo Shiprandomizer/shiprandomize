@@ -25,15 +25,15 @@ const Profile: FC<Props> = ({
     if (!onGetSelectedShipIdsRequest) {
       return;
     }
-    setProfiles((p) => {
-      const np = [...p];
-      const id = getNextFreeNumber(np ? np.map((p) => p.id) : []);
-      np.push({
+    setProfiles((profiles) => {
+      const newProfiles = [...profiles];
+      const id = getNextFreeNumber(newProfiles ? newProfiles.map((profile) => profile.id) : []);
+      newProfiles.push({
         id: id,
         name: newProfileName,
         shipIds: onGetSelectedShipIdsRequest(),
       });
-      return np;
+      return newProfiles;
     });
   }
 

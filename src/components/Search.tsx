@@ -9,7 +9,7 @@ interface Props {
 
 const Search: FC<Props> = ({ onShipIdsFound }: Props) => {
   const [searchText, setSearchText] = useState("");
-  const [foundShips, setfoundShips] = useState<number[]>([]);
+  const [foundShips, setFoundShips] = useState<number[]>([]);
   const [config] = useContext(ConfigContext);
 
   function search(name: string) {
@@ -18,7 +18,7 @@ const Search: FC<Props> = ({ onShipIdsFound }: Props) => {
     }
     setSearchText(name);
     if (!name) {
-      setfoundShips([]);
+      setFoundShips([]);
       return;
     }
     const ships = config.ships;
@@ -28,7 +28,7 @@ const Search: FC<Props> = ({ onShipIdsFound }: Props) => {
     const found = ships
       .filter((s) => s.name.toLowerCase().includes(name.toLowerCase()))
       .map((f) => f.id);
-    setfoundShips(found);
+    setFoundShips(found);
   }
 
   useEffect(() => {
@@ -39,7 +39,7 @@ const Search: FC<Props> = ({ onShipIdsFound }: Props) => {
   }, [foundShips]);
 
   return (
-    <div className="config-search">
+    <div className="search-panel">
       <span> Search: </span>
       <input
         type="text"

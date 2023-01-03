@@ -1,16 +1,5 @@
 import { Config } from "../models/Config";
 
-// Type
-// A: Aircraft Carrier
-// B: Battleship
-// C: Cruiser
-// D: Destroyer
-// S: Submarine
-
-// Kind
-// N: normal or early-access ship
-// P: premium or special ship (except early-access)
-
 const DefaultConfig: Config = {
   version: 3,
   configVisible: false,
