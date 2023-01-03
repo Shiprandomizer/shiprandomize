@@ -42,6 +42,7 @@ export default function PlayPanel() {
         <div className="ship-property ship-tier">{currentShip && currentShip.tier}</div>
         <div className="go-button">
           <button
+            aria-label="go"
             onClick={goHandler}
             disabled={running}
             className="go"
@@ -50,6 +51,6 @@ export default function PlayPanel() {
         <div className="logo logo-bottom"></div>
         <div className="empty-bottom"></div>
       </div>
-    </div>
+    </div >
   );
 }

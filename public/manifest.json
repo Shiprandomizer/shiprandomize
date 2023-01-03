@@ -1,5 +1,12 @@
 {
   "name": "Shiprandomizer",
+  "short_name": "Shiprandomizer",
+  "id": "/?source=pwa",
+  "start_url": "/?source=pwa",
+  "background_color": "#gggggg",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#gggggg",
   "icons": [
     {
       "src": "/images/apple-icon-36x36.png",
