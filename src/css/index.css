@@ -178,7 +178,7 @@ button.go:disabled {
   background-color: var(--panel-background-darker-color);
 }
 
-.config-search {
+.search-panel {
   padding: 1rem;
   margin-bottom: 0.5rem;
   background-color: var(--panel-background-dark-color);
@@ -226,7 +226,7 @@ body {
     visibility: collapse;
   }
    
-  .config-search {
+  .search-panel {
     display: none;
   }
 }

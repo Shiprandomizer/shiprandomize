@@ -10,7 +10,7 @@ export interface Ship {
   selected: boolean;
 }
 
-export const FieldValues = ["Id", "", "Name", "Nation", "Tier", "Kind", "Type"];
+export const Fields = ["Id", "", "Name", "Nation", "Tier", "Kind", "Type"];
 
 export const NationValues = [
   "U.K.",
@@ -27,13 +27,13 @@ export const NationValues = [
 ];
 export type Nations = typeof NationValues[number];
 
-export const TierValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] as const;
-export type Tier = typeof TierValues[number];
+export const Tiers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] as const;
+export type Tier = typeof Tiers[number];
 
 export type Kind = "N" | "P";
 
-export const ShipTypeValues = ["A", "B", "C", "D", "S"] as const;
-export type ShipType = typeof ShipTypeValues[number];
+export const ShipTypes = ["A", "B", "C", "D", "S"] as const;
+export type ShipType = typeof ShipTypes[number];
 
 export interface Config {
   version: number;

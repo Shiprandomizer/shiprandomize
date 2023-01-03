@@ -39,6 +39,8 @@ To build the project:
 npm run build
 ```
 
----
-For Graf_d 😉
-<https://www.twitch.tv/graf_d>
+Locally preview production build:  
+
+```bash
+npm run preview
+```
