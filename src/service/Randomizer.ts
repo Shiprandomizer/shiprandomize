@@ -8,7 +8,7 @@ export default class Randomizer {
   randomizerStoppedHandler: (() => void) | null = null;
   changeShipHandler: ((ship: Ship) => void) | null = null;
 
-  #interval = 0;
+  #interval: NodeJS.Timer | null = null;
 
   constructor() {}
 
@@ -36,7 +36,6 @@ export default class Randomizer {
   abort() {
     if (this.#interval) {
       clearInterval(this.#interval);
-      this.#interval = 0;
     }
   }
 }
