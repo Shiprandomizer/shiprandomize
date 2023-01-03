@@ -196,8 +196,8 @@ function ConfigPanel() {
       <div
         className={
           configVisible
-            ? "config-button-panel config-button-panel-open"
-            : "config-button-panel"
+            ? "side-button-panel-left side-button-panel-left-open"
+            : "side-button-panel-left"
         }
       >
         <button
