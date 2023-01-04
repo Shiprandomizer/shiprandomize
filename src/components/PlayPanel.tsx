@@ -51,8 +51,6 @@ export default function PlayPanel() {
         <div className="logo logo-bottom"></div>
         <div className="empty-bottom"></div>
       </div>
-      <div className="logo logo-watermark-left"></div>
-      <div className="logo logo-watermark-right"></div>
     </div >
   );
 }

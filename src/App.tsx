@@ -8,7 +8,7 @@ import PlayPanel from "./components/PlayPanel";
 
 type ConfigContextType = [config: Config, setConfig: (config: Config) => void];
 
-const defaultValue: ConfigContextType = [DefaultConfig, (config: Config) => { }];
+const defaultValue: ConfigContextType = [DefaultConfig, (config: Config) => {}];
 
 export const ConfigContext = createContext<ConfigContextType>(defaultValue);
 
@@ -17,6 +17,8 @@ function App() {
   return (
     <ConfigContext.Provider value={[config, setConfig]}>
       <div>
+        <div className="logo logo-watermark-left"></div>
+        <div className="logo logo-watermark-right"></div>
         <PlayPanel />
         <ConfigPanel />
         <DescriptionPanel />

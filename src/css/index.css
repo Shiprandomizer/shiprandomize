@@ -83,25 +83,29 @@ input[type="text"] {
     height: 100vh;
 }
 
+.logo-watermark-left {
+    position: fixed;
+    left: 250px;
+    height: 100px;
+    width: 10rem;
+    top: 40vh;
+    background: url(../assets/images/watermark.png) no-repeat left center;
+}
+
+.logo-watermark-right {
+    position: fixed;
+    right: 250px;
+    height: 100px;
+    width: 10rem;
+    top: 40vh;
+    background: url(../assets/images/watermark.png) no-repeat right center;
+}
+
 .logo {
     background-size: contain;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.logo-watermark-left {
-    position: absolute;
-    left: 10;
-    height: 10rem;
-    background: url(../assets/images/watermark.png) no-repeat left center;
-}
-
-.logo-watermark-right {
-    position: absolute;
-    right: 10;
-    height: 10rem;
-    background: url(../assets/images/watermark.png) no-repeat right center;
 }
 
 .ship-property {
@@ -239,6 +243,12 @@ body {
         visibility: collapse;
     }
     .search-panel {
+        display: none;
+    }
+    .logo-watermark-left {
+        display: none;
+    }
+    .logo-watermark-right {
         display: none;
     }
 }
