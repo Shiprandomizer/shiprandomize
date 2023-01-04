@@ -3,7 +3,7 @@ import { Config } from "../models/Config";
 const DefaultConfig: Config = {
   version: 3,
   configVisible: false,
-  descriptionVisible: false,
+  descriptionVisible: true,
   sound: {
     volume: 0.3,
     file: "bell",
