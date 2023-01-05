@@ -76,6 +76,8 @@ input[type="text"] {
   margin-bottom: 2rem;
   height: 10rem;
   background: url(../assets/images/logo-bottom.png) no-repeat center center;
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out;
 }
 
 .empty-bottom {
@@ -86,17 +88,19 @@ input[type="text"] {
 .logo-watermark {
   position: fixed;
   height: 100px;
-  width: 10rem;
+  width: 100px;
   background: url(../assets/images/watermark.png) no-repeat left center;
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out;
 }
 
 .logo-watermark-left {
-  left: 250px;
+  left: calc(50vw + 500px);
   top: 40vh;
 }
 
 .logo-watermark-right {
-  right: 250px;
+  left: calc(50vw - 600px);
   top: 40vh;
 }
 
@@ -229,7 +233,22 @@ body {
   }
 }
 
+@media (max-height: 800px) {
+  .logo-bottom {
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+  }
+}
+
 /* small */
+@media (max-width: 1200px) {
+  .logo-watermark {
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+  }
+}
+
+/* very-small */
 @media (max-width: 700px) {
   .logo-top {
     margin-left: 4rem;
