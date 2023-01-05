@@ -3,10 +3,10 @@
   "short_name": "Shiprandomizer",
   "id": "/?source=pwa",
   "start_url": "/?source=pwa",
-  "background_color": "#dddddd",
+  "background_color": "#000000",
   "display": "standalone",
   "scope": "/",
-  "theme_color": "#dddddd",
+  "theme_color": "#000000",
   "icons": [
     {
       "src": "/images/apple-icon-36x36.png",
