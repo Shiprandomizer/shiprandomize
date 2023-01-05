@@ -19,8 +19,8 @@ function App() {
   return (
     <ConfigContext.Provider value={[config, setConfig]}>
       <div>
-        <div className="logo logo-watermark-left"></div>
-        <div className="logo logo-watermark-right"></div>
+        <div className="logo logo-watermark logo-watermark-left"></div>
+        <div className="logo logo-watermark logo-watermark-right"></div>
         <PlayPanel />
         <ConfigPanel />
         <DescriptionPanel />

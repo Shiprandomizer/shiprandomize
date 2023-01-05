@@ -83,22 +83,21 @@ input[type="text"] {
   height: 100vh;
 }
 
-.logo-watermark-left {
+.logo-watermark {
   position: fixed;
-  left: 250px;
   height: 100px;
   width: 10rem;
-  top: 40vh;
   background: url(../assets/images/watermark.png) no-repeat left center;
 }
 
-.logo-watermark-right {
-  position: fixed;
-  right: 250px;
-  height: 100px;
-  width: 10rem;
+.logo-watermark-left {
+  left: 250px;
   top: 40vh;
-  background: url(../assets/images/watermark.png) no-repeat right center;
+}
+
+.logo-watermark-right {
+  right: 250px;
+  top: 40vh;
 }
 
 .logo {
@@ -106,20 +105,6 @@ input[type="text"] {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.logo-watermark-left {
-  position: absolute;
-  left: 10;
-  height: 10rem;
-  background: url(../assets/images/watermark.png) no-repeat left center;
-}
-
-.logo-watermark-right {
-  position: absolute;
-  right: 10;
-  height: 10rem;
-  background: url(../assets/images/watermark.png) no-repeat right center;
 }
 
 .ship-property {
@@ -245,7 +230,6 @@ body {
 }
 
 /* small */
-
 @media (max-width: 700px) {
   .logo-top {
     margin-left: 4rem;

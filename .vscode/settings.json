@@ -5,7 +5,16 @@
     "source.fixAll.eslint": true
   },
 
+  "[tsx]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },   
+  "[ts]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },   
   "[jsx]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },   
+  "[js]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },    
   "[typescript]": {
