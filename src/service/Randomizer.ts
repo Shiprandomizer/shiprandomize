@@ -10,8 +10,6 @@ export default class Randomizer {
 
   #interval: NodeJS.Timer | null = null;
 
-  constructor() {}
-
   start() {
     this.#interval = setInterval(() => {
       const shipsToChoose = this.ships.filter((s) => s.selected);
@@ -28,13 +26,13 @@ export default class Randomizer {
 
   stop() {
     this.abort();
-    if (this.randomizerStoppedHandler) {
+    if (this.randomizerStoppedHandler != null) {
       this.randomizerStoppedHandler();
     }
   }
 
   abort() {
-    if (this.#interval) {
+    if (this.#interval != null) {
       clearInterval(this.#interval);
     }
   }

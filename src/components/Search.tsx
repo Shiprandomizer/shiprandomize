@@ -1,6 +1,5 @@
-"use strict";
-
 import { FC, useContext, useEffect, useState } from "react";
+
 import { ConfigContext } from "../App";
 
 interface Props {

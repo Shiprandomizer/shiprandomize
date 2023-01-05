@@ -1,4 +1,5 @@
 import { createContext } from "react";
+
 import useConfig from "./hooks/useConfig";
 import ConfigPanel from "./components/ConfigPanel";
 import DescriptionPanel from "./components/DescriptionPanel";
@@ -8,6 +9,7 @@ import PlayPanel from "./components/PlayPanel";
 
 type ConfigContextType = [config: Config, setConfig: (config: Config) => void];
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/no-empty-function
 const defaultValue: ConfigContextType = [DefaultConfig, (config: Config) => {}];
 
 export const ConfigContext = createContext<ConfigContextType>(defaultValue);

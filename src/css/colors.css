@@ -2,7 +2,7 @@
   --foreground-color: hsl(0, 0%, 90%);
   --foreground-dark-color: hsl(0, 0%, 0%);
   --foreground-highlight-light-color: hsl(50, 100%, 50%);
-  --foreground-highlight-dark-color:hsl(50, 70%, 15%);
+  --foreground-highlight-dark-color: hsl(50, 70%, 15%);
 
   --button-foreground-light-color: hsl(0, 0%, 90%);
   --button-background-color: hsl(0, 0%, 65%);
@@ -12,13 +12,13 @@
   --shadow-color: hsla(0, 0%, 0%, 0.3);
   --shadow: var(--shadow-color) 0px 0px 5px 5px;
 
-  --play-panel-background-color:  hsla(0, 0%, 0%, 0.25);
+  --play-panel-background-color: hsla(0, 0%, 0%, 0.25);
 
   --panel-background-dark-color: hsl(0, 0%, 20%);
   --panel-background-darker-color: hsl(0, 0%, 15%);
 
   --panel-button-background-darker-color: hsl(0, 0%, 35%);
-  
-  --donation-button-background-color:hsl(120, 30%, 30%);
-  --donation-button-background-color-hover:hsl(120, 30%, 40%);
+
+  --donation-button-background-color: hsl(120, 30%, 30%);
+  --donation-button-background-color-hover: hsl(120, 30%, 40%);
 }

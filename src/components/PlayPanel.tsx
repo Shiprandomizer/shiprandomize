@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
-import { Ship } from "../models/Config";
 import JSConfetti from "js-confetti";
+
+import { Ship } from "../models/Config";
 import Randomizer from "../service/Randomizer";
 import { ConfigContext } from "../App";
 
@@ -8,7 +9,7 @@ const randomizer = new Randomizer();
 const jsConfetti = new JSConfetti();
 
 export default function PlayPanel() {
-  const [config, setConfig] = useContext(ConfigContext);
+  const [config] = useContext(ConfigContext);
   const [currentShip, setCurrentShip] = useState<Ship>();
   const [running, setRunning] = useState(false);
 
@@ -20,7 +21,7 @@ export default function PlayPanel() {
       setCurrentShip(ship);
     };
     randomizer.randomizerStoppedHandler = () => {
-      var audio = new Audio(`sounds/${config.sound.file}.mp3`);
+      const audio = new Audio(`sounds/${config.sound.file}.mp3`);
       audio.volume = config.sound ? config.sound.volume : 0.3;
       audio.play();
 
@@ -35,11 +36,15 @@ export default function PlayPanel() {
     <div className="content">
       <div className="panel">
         <div className="logo logo-top"></div>
-        <div className="ship-property ship-name">{currentShip && currentShip.name}</div>
+        <div className="ship-property ship-name">
+          {currentShip && currentShip.name}
+        </div>
         <div className="ship-property ship-nation">
           {currentShip && currentShip.nation}
         </div>
-        <div className="ship-property ship-tier">{currentShip && currentShip.tier}</div>
+        <div className="ship-property ship-tier">
+          {currentShip && currentShip.tier}
+        </div>
         <div className="go-button">
           <button
             aria-label="go"
@@ -51,6 +56,8 @@ export default function PlayPanel() {
         <div className="logo logo-bottom"></div>
         <div className="empty-bottom"></div>
       </div>
-    </div >
+      <div className="logo logo-watermark-left"></div>
+      <div className="logo logo-watermark-right"></div>
+    </div>
   );
 }

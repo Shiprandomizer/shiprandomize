@@ -53,8 +53,10 @@ export interface Sound {
 
 export interface Sort {
   by: string;
-  order: string;
+  order: SortOrder;
 }
+
+export type SortOrder = "ascending" | "descending";
 
 export interface UserProfile {
   id: number;

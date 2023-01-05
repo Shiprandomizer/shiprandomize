@@ -7,7 +7,7 @@
 .side-panel-left {
   z-index: 50;
   margin: 1rem;
-  padding: 1rem;  
+  padding: 1rem;
   position: absolute;
   background-color: var(--panel-background-darker-color);
   max-width: 580px;
@@ -96,19 +96,19 @@
   width: 260px;
   height: 90px;
   background-color: var(--panel-background-dark-color);
-  display: block; 
+  display: block;
   border-radius: 10px;
   box-shadow: var(--shadow);
-  border: 2px double var(--foreground-color); 
-  display: block; 
-  text-align: center; 
+  border: 2px double var(--foreground-color);
+  display: block;
+  text-align: center;
 }
 
 .info-panel img {
   float: left;
-  margin-top: 4px; 
+  margin-top: 4px;
   margin-left: 4px;
-  border-radius: 10%; 
+  border-radius: 10%;
   border: 2px double var(--foreground-color);
 }
 
@@ -131,7 +131,7 @@
     max-width: calc(100% - 40px);
     height: calc(100% - 80px);
   }
-  
+
   .side-panel-button-group-left-open {
     position: fixed;
     right: 0px;

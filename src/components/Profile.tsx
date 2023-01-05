@@ -1,4 +1,5 @@
 import { FC, useContext, useEffect, useState } from "react";
+
 import { UserProfile } from "../models/Config";
 import { ConfigContext } from "../App";
 
@@ -27,9 +28,11 @@ const Profile: FC<Props> = ({
     }
     setProfiles((profiles) => {
       const newProfiles = [...profiles];
-      const id = getNextFreeNumber(newProfiles ? newProfiles.map((profile) => profile.id) : []);
+      const id = getNextFreeNumber(
+        newProfiles ? newProfiles.map((profile) => profile.id) : []
+      );
       newProfiles.push({
-        id: id,
+        id,
         name: newProfileName,
         shipIds: onGetSelectedShipIdsRequest(),
       });

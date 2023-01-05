@@ -1,6 +1,7 @@
 "use strict";
 
 import { useContext, useEffect, useRef, useState } from "react";
+
 import {
   Ship,
   Tier,
@@ -10,17 +11,19 @@ import {
   Tiers,
   NationValues,
   Fields,
+  Sort,
 } from "../models/Config";
 import Search from "./Search";
 import Profile from "./Profile";
 import { ConfigContext } from "../App";
+import UpDown from "./UpDown";
 
 function ConfigPanel() {
   const [config, setConfig] = useContext(ConfigContext);
   const [ships, setShips] = useState<Ship[]>([]);
   const [open, setOpen] = useState(false);
   const [highlightedShips, setHighlightedShips] = useState<number[]>([]);
-  const [sortConfig, setSortConfig] = useState({
+  const [sortConfig, setSortConfig] = useState<Sort>({
     by: "id",
     order: "ascending",
   });
@@ -125,7 +128,7 @@ function ConfigPanel() {
     if (!shipTable?.current) {
       return;
     }
-    console.dir(shipTable.current.children)
+    console.dir(shipTable.current.children);
 
     const trs = Array.from(shipTable.current.children).find((s) => {
       if (s instanceof HTMLElement && s.dataset.id) {
@@ -161,15 +164,6 @@ function ConfigPanel() {
     setShips(shipsToSelect);
   }
 
-  function UpDown(props: { name: string }) {
-    let indicator = "";
-    if (sortConfig && sortConfig.by === props.name) {
-      indicator = sortConfig.order == "descending" ? "🠻" : "🠹";
-    }
-
-    return <>{indicator}</>;
-  }
-
   function handleTableHeadClick(headerId: string) {
     setSortConfig((p) => {
       return {
@@ -200,16 +194,24 @@ function ConfigPanel() {
             : "side-panel-button-group-left"
         }
       >
-        <button className="side-panel-button side-panel-button-toggle-left" onClick={() => setOpen((p) => !p)} >
+        <button
+          className="side-panel-button side-panel-button-toggle-left"
+          onClick={() => setOpen((p) => !p)}
+        >
           {open ? "◀" : "⚙️"}
         </button>
-        <button className="side-panel-button side-panel-button-mute-toggle-left" onClick={toggleMuteSound}>
+        <button
+          className="side-panel-button side-panel-button-mute-toggle-left"
+          onClick={toggleMuteSound}
+        >
           {isMuted && <div>🔇</div>}
           {!isMuted && <div>📢</div>}
         </button>
       </div>
       <div
-        className={open ? "side-panel-left" : "side-panel-left side-panel-closed"}
+        className={
+          open ? "side-panel-left" : "side-panel-left side-panel-closed"
+        }
         style={open ? { display: "block" } : { display: "none" }}
       >
         <div className="config-header">
@@ -231,12 +233,15 @@ function ConfigPanel() {
                   select:
                 </span>
               </div>
-              <button onClick={() => { setAllSelectionState(true); }} >all</button>
+              <button
+                onClick={() => {
+                  setAllSelectionState(true);
+                }}
+              >
+                all
+              </button>
               {Tiers.map((t) => (
-                <button
-                  key={t}
-                  onClick={() => changeTierSelection(t, true)}
-                >
+                <button key={t} onClick={() => changeTierSelection(t, true)}>
                   {t}
                 </button>
               ))}
@@ -253,12 +258,15 @@ function ConfigPanel() {
                   deselect:
                 </span>
               </div>
-              <button onClick={() => { setAllSelectionState(false); }} >all</button>
+              <button
+                onClick={() => {
+                  setAllSelectionState(false);
+                }}
+              >
+                all
+              </button>
               {Tiers.map((t) => (
-                <button
-                  key={t}
-                  onClick={() => changeTierSelection(t, false)}
-                >
+                <button key={t} onClick={() => changeTierSelection(t, false)}>
                   {t}
                 </button>
               ))}
@@ -267,7 +275,10 @@ function ConfigPanel() {
             <div style={{ marginTop: "1rem" }} className="detail">
               <div>
                 {NationValues.map((t) => (
-                  <button key={t} onClick={() => changeNationSelection(t, true)}>
+                  <button
+                    key={t}
+                    onClick={() => changeNationSelection(t, true)}
+                  >
                     {t}
                   </button>
                 ))}
@@ -300,7 +311,10 @@ function ConfigPanel() {
                     onClick={() => handleTableHeadClick(t.toLocaleLowerCase())}
                   >
                     {t}
-                    <UpDown name={t.toLocaleLowerCase()}></UpDown>
+                    <UpDown
+                      sortConfig={sortConfig}
+                      name={t.toLocaleLowerCase()}
+                    ></UpDown>
                   </th>
                 ))}
               </tr>

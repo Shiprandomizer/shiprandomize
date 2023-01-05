@@ -1,4 +1,5 @@
 import { useContext, useEffect, useState } from "react";
+
 import { Config } from "../models/Config";
 import { ConfigContext } from "../App";
 
@@ -18,8 +19,15 @@ export default function DescriptionPanel() {
 
   return (
     <>
-      <div className={open ? "side-panel-button-group-right side-panel-button-group-right-open" : "side-panel-button-group-right side-panel-button-group-right-closed"}>
-        <button className="side-panel-button side-panel-button-toggle-right"
+      <div
+        className={
+          open
+            ? "side-panel-button-group-right side-panel-button-group-right-open"
+            : "side-panel-button-group-right side-panel-button-group-right-closed"
+        }
+      >
+        <button
+          className="side-panel-button side-panel-button-toggle-right"
           onClick={() => {
             toggleVisibility();
           }}
@@ -31,11 +39,9 @@ export default function DescriptionPanel() {
 
       <div
         className={
-          open
-            ? "side-panel-right"
-            : "side-panel-right side-panel-closed"
-        }>
-
+          open ? "side-panel-right" : "side-panel-right side-panel-closed"
+        }
+      >
         {open && (
           <div>
             <h3>Description</h3>
@@ -45,34 +51,35 @@ export default function DescriptionPanel() {
               Superships.
             </p>
             <p>
-              Either select all ships or just select the
-              ships you would like to sail from. Your settings will be saved
-              in your browser cache. To change the settings, click on the
-              setting icon (⚙️) on the left site.
+              Either select all ships or just select the ships you would like to
+              sail from. Your settings will be saved in your browser cache. To
+              change the settings, click on the setting icon (⚙️) on the left
+              site.
             </p>
             <p>A free community project for World of Warships (TM)</p>
-            <p>Contact: <b>graf_d@shiprandomizer.de</b></p>
             <p>
-              <div >
-                <span className="twitch-icon"></span>
-                <a href="https://twitch.tv/Graf_d">https://twitch.tv/Graf_d</a>
-              </div>
+              Contact: <b>graf_d@shiprandomizer.de</b>
             </p>
+            <p />
+            <div>
+              <span className="twitch-icon"></span>
+              <a href="https://twitch.tv/Graf_d">https://twitch.tv/Graf_d</a>
+            </div>
             <p>
               <b>(c) 2022 HighTower & Graf_d</b>
             </p>
             <a
               href="https://www.tipeeestream.com/graf_d/donation"
               target="_blank"
+              rel="noreferrer"
             >
               <button className="donation">
                 A small donation for webhosting would make me happy 🙃
               </button>
             </a>
           </div>
-        )
-        }
-      </div >
+        )}
+      </div>
     </>
   );
 }
