@@ -1,5 +1,4 @@
 src/*.generated.*
 src/*.generated/**/*.*
-.vscode/**/*.*
 dist/**/*.
 node_modules/**/*.
