@@ -66,7 +66,7 @@ export default function DescriptionPanel() {
               <a href="https://twitch.tv/Graf_d">https://twitch.tv/Graf_d</a>
             </div>
             <p>
-              <b>(c) 2022 HighTower & Graf_d</b>
+              <b>© 2022 by HighTower & Graf_d</b>
             </p>
             <a
               href="https://www.tipeeestream.com/graf_d/donation"
