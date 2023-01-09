@@ -12,30 +12,31 @@ const Search: FC<Props> = ({ onShipIdsFound }: Props) => {
   const [config] = useContext(ConfigContext);
 
   function search(name: string) {
-    if (!config) {
+    const ships = config.ships;
+    if (!ships) {
+      onShipIdsFound([]);
       return;
     }
+
     setSearchText(name);
     if (!name) {
       setFoundShips([]);
+      if (onShipIdsFound) {
+        onShipIdsFound([]);
+      }
+
       return;
     }
-    const ships = config.ships;
-    if (!ships) {
-      return;
-    }
+
     const found = ships
       .filter((s) => s.name.toLowerCase().includes(name.toLowerCase()))
       .map((f) => f.id);
     setFoundShips(found);
-  }
 
-  useEffect(() => {
-    if (!onShipIdsFound) {
-      return;
+    if (onShipIdsFound) {
+      onShipIdsFound(found);
     }
-    onShipIdsFound(foundShips);
-  }, [foundShips]);
+  }
 
   return (
     <div className="search-panel">

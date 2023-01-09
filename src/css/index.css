@@ -208,10 +208,18 @@ button.go:disabled {
 }
 
 .highlighted-row {
-  background-color: var(--panel-background-dark-color);
+  background-color: var(--panel-background-highlight-color);
 }
 
-div.ship-list > table > thead > tr > th {
+div.ship-list table {
+  border-spacing: 0px;
+}
+
+div.ship-list td {
+  padding: 2px;
+}
+
+div.ship-list th {
   cursor: pointer;
 }
 
