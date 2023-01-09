@@ -1,282 +1,295 @@
 html {
-  background: url(../assets/images/background.jpg) no-repeat center center fixed;
-  background-size: cover;
-  background-color: var(--panel-background-dark-color);
-  color: var(--foreground-color);
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: url(../assets/images/background.jpg) no-repeat center center fixed;
+    background-size: cover;
+    background-color: var(--panel-background-dark-color);
+    color: var(--foreground-color);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 a {
-  color: var(--foreground-color);
+    color: var(--foreground-color);
 }
 
 .twitch-icon {
-  width: 20px;
-  height: 20px;
-  margin-right: 0.5rem;
-  position: relative;
-  top: 5px;
-  display: inline-block;
-  background-image: url(../assets/images/twitch-icon.svg);
-  background-size: contain;
-  filter: invert(100%);
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5rem;
+    position: relative;
+    top: 5px;
+    display: inline-block;
+    background-image: url(../assets/images/twitch-icon.svg);
+    background-size: contain;
+    filter: invert(100%);
 }
 
 button {
-  background-color: var(--button-background-color);
-  border: none;
-  color: var(--foreground-dark-color);
-  padding: 4px 8px;
-  margin: 1px;
+    background-color: var(--button-background-color);
+    border: none;
+    color: var(--foreground-dark-color);
+    padding: 4px 8px;
+    margin: 1px;
 }
 
 button:hover {
-  background-color: var(--button-background-hover-color);
+    background-color: var(--button-background-hover-color);
 }
 
 button.donation {
-  text-decoration: underline;
-  padding: 1rem;
-  color: var(--foreground-color);
-  background-color: var(--donation-button-background-color);
+    text-decoration: underline;
+    padding: 1rem;
+    color: var(--foreground-color);
+    background-color: var(--donation-button-background-color);
 }
 
 button.donation:hover {
-  background-color: var(--donation-button-background-color-hover);
+    background-color: var(--donation-button-background-color-hover);
 }
 
 select {
-  padding: 4px 3px;
-  margin: 3px;
-  border: none;
-  background-color: var(--button-background-color);
+    padding: 4px 3px;
+    margin: 3px;
+    border: none;
+    background-color: var(--button-background-color);
 }
 
 input[type="text"] {
-  border: none;
-  margin: 8px;
-  height: 1.5rem;
+    border: none;
+    margin: 8px;
+    height: 1.5rem;
 }
 
 .content {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .logo-top {
-  margin-top: 7rem;
-  margin-top: 20%;
-  margin-bottom: 10%;
-  height: 5rem;
-  background: url(../assets/images/logo-top.png) no-repeat center center;
+    margin-top: 7rem;
+    margin-top: 20%;
+    margin-bottom: 10%;
+    height: 5rem;
+    background: url(../assets/images/logo-top.png) no-repeat center center;
 }
 
 .logo-bottom {
-  margin-top: 4rem;
-  margin-bottom: 2rem;
-  height: 10rem;
-  background: url(../assets/images/logo-bottom.png) no-repeat center center;
-  opacity: 1;
-  transition: opacity 0.4s ease-in-out;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    height: 10rem;
+    background: url(../assets/images/logo-bottom.png) no-repeat center center;
+    opacity: 1;
+    transition: opacity 0.4s ease-in-out;
 }
 
 .empty-bottom {
-  height: auto;
-  height: 100vh;
+    height: auto;
+    height: 100vh;
 }
 
 .logo-watermark {
-  position: fixed;
-  height: 100px;
-  width: 100px;
-  background: url(../assets/images/watermark.png) no-repeat left center;
-  opacity: 1;
-  transition: opacity 0.4s ease-in-out;
+    position: fixed;
+    height: 100px;
+    width: 100px;
+    background: url(../assets/images/watermark.png) no-repeat left center;
+    opacity: 1;
+    transition: opacity 0.4s ease-in-out;
 }
 
 .logo-watermark-left {
-  left: calc(50vw + 500px);
-  top: 40vh;
+    left: calc(50vw + 500px);
+    top: 40vh;
 }
 
 .logo-watermark-right {
-  left: calc(50vw - 600px);
-  top: 40vh;
+    left: calc(50vw - 600px);
+    top: 40vh;
 }
 
 .logo {
-  background-size: contain;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .ship-property {
-  font-family: Georgia, sans-serif;
-  font-weight: bold;
-  text-decoration-color: var(--foreground-highlight-dark-color);
-  background-clip: text;
-  background-image: linear-gradient(
-    to right,
-    var(--foreground-highlight-dark-color),
-    var(--foreground-highlight-light-color)
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  color: var(--foreground-highlight-light-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    font-family: Georgia, sans-serif;
+    font-weight: bold;
+    text-decoration-color: var(--foreground-highlight-dark-color);
+    background-clip: text;
+    background-image: linear-gradient( to right, var(--foreground-highlight-dark-color), var(--foreground-highlight-light-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    color: var(--foreground-highlight-light-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .ship-name {
-  height: 5rem;
-  font-size: xx-large;
-  text-decoration-line: underline;
-  text-decoration-style: double;
+    height: 5rem;
+    font-size: xx-large;
+    text-decoration-line: underline;
+    text-decoration-style: double;
 }
 
 .ship-nation {
-  height: 3rem;
-  font-size: x-large;
+    height: 3rem;
+    font-size: x-large;
 }
 
 .ship-tier {
-  height: 2rem;
-  font-size: x-large;
+    height: 2rem;
+    font-size: x-large;
 }
 
 div.go-button {
-  margin-top: 20px;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    margin-top: 20px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 button.go {
-  top: 50%;
-  left: 50%;
-  background-color: transparent;
-  background-image: url("../assets/images/button-go.png");
-  border-radius: 108px;
-  border: -1px double #cccccc;
-  color: var(--foreground-color);
-  padding: 0px;
-  width: 108px;
-  height: 108px;
-  transition: all 0.5s;
-  cursor: pointer;
+    top: 50%;
+    left: 50%;
+    background-color: transparent;
+    background-image: url("../assets/images/button-go.png");
+    border-radius: 108px;
+    border: -1px double #cccccc;
+    color: var(--foreground-color);
+    padding: 0px;
+    width: 108px;
+    height: 108px;
+    transition: all 0.5s;
+    cursor: pointer;
 }
 
 button.go:disabled {
-  background-image: url("../assets/images/radar.gif");
-  transition: all 0.5s;
+    background-image: url("../assets/images/radar.gif");
+    transition: all 0.5s;
 }
 
 .config-section {
-  display: flex;
-  align-items: center;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  background-color: var(--panel-background-dark-color);
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: var(--panel-background-dark-color);
 }
 
 .ship-config {
-  padding: 1rem;
-  margin-bottom: 1rem;
-  background-color: var(--panel-background-dark-color);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: var(--panel-background-dark-color);
 }
 
 .ship-list {
-  margin-bottom: 1rem;
-  padding: 1rem;
-  background-color: var(--panel-background-dark-color);
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: var(--panel-background-dark-color);
 }
 
 .config-header {
-  position: sticky;
-  top: 0;
-  background-color: var(--panel-background-darker-color);
+    position: sticky;
+    top: 0;
+    background-color: var(--panel-background-darker-color);
 }
 
 .search-panel {
-  padding: 1rem;
-  margin-bottom: 0.5rem;
-  background-color: var(--panel-background-dark-color);
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    background-color: var(--panel-background-dark-color);
 }
 
 .highlighted-row {
-  background-color: var(--panel-background-highlight-color);
+    background-color: var(--panel-background-highlight-color);
 }
 
 div.ship-list table {
-  border-spacing: 0px;
+    border-spacing: 0px;
 }
 
 div.ship-list td {
-  padding: 2px;
+    padding: 2px;
 }
 
 div.ship-list th {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 body {
-  margin: 0;
-  font-family: sans-serif;
-  line-height: 1.5;
+    margin: 0;
+    font-family: sans-serif;
+    line-height: 1.5;
 }
 
 .main {
-  flex-grow: 1;
-  padding: 20px;
-  overflow-y: auto;
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
 }
 
+
+/* .logo-tk {
+    left: calc(50vw + 400px);
+    top: 80vh;
+    position: fixed;
+    background-color: transparent;
+    background-image: url("../assets/images/logo-tk.png");
+    color: var(--foreground-color);
+    padding: 0px;
+    width: 200px;
+    height: 80px;
+} */
+
 @media (max-height: 700px) {
-  .config-header {
-    position: static;
-  }
+    .config-header {
+        position: static;
+    }
 }
 
 @media (max-height: 800px) {
-  .logo-bottom {
-    opacity: 0;
-    transition: opacity 0.4s ease-in-out;
-  }
+    .logo-bottom {
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+    }
 }
+
 
 /* small */
+
 @media (max-width: 1200px) {
-  .logo-watermark {
-    opacity: 0;
-    transition: opacity 0.4s ease-in-out;
-  }
+    .logo-watermark {
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+    }
 }
 
+
 /* very-small */
+
 @media (max-width: 700px) {
-  .logo-top {
-    margin-left: 4rem;
-    margin-right: 4rem;
-    margin-top: 1rem;
-  }
-  .detail {
-    display: none;
-    width: 0;
-    height: 0;
-    opacity: 0;
-    visibility: collapse;
-  }
-  .search-panel {
-    display: none;
-  }
-  .logo-watermark-left {
-    display: none;
-  }
-  .logo-watermark-right {
-    display: none;
-  }
+    .logo-top {
+        margin-left: 4rem;
+        margin-right: 4rem;
+        margin-top: 1rem;
+    }
+    .detail {
+        display: none;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        visibility: collapse;
+    }
+    .search-panel {
+        display: none;
+    }
+    .logo-watermark-left {
+        display: none;
+    }
+    .logo-watermark-right {
+        display: none;
+    }
 }
