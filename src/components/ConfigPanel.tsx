@@ -128,7 +128,6 @@ function ConfigPanel() {
     if (!shipTable?.current) {
       return;
     }
-    console.dir(shipTable.current.children);
 
     const trs = Array.from(shipTable.current.children).find((s) => {
       if (s instanceof HTMLElement && s.dataset.id) {
@@ -321,7 +320,11 @@ function ConfigPanel() {
             </thead>
             <tbody ref={shipTable}>
               {ships.map((s) => (
-                <tr key={s.id} data-id={s.id}>
+                <tr
+                  className={isShipHighlighted(s.id) ? "highlighted-row" : ""}
+                  key={s.id}
+                  data-id={s.id}
+                >
                   <td>{s.id}.</td>
                   <td>
                     <input
@@ -334,9 +337,7 @@ function ConfigPanel() {
                       name={`${s.id}`}
                     />
                   </td>
-                  <td
-                    className={isShipHighlighted(s.id) ? "highlighted-row" : ""}
-                  >
+                  <td>
                     <label htmlFor={`${s.id}`}>{s.name}</label>
                   </td>
                   <td className="detail">
