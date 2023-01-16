@@ -143,6 +143,11 @@ input[type="text"] {
     font-size: x-large;
 }
 
+.ship-type {
+    height: 2rem;
+    font-size: x-large;
+}
+
 div.go-button {
     margin-top: 20px;
     height: 100px;

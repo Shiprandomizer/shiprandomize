@@ -4,7 +4,7 @@ import JSConfetti from "js-confetti";
 import { Ship } from "../models/Config";
 import Randomizer from "../service/Randomizer";
 import { ConfigContext } from "../App";
-
+import { shipTypeToString } from '../models/Config';
 const randomizer = new Randomizer();
 const jsConfetti = new JSConfetti();
 
@@ -44,6 +44,9 @@ export default function PlayPanel() {
         </div>
         <div className="ship-property ship-tier">
           {currentShip && currentShip.tier}
+        </div>
+        <div className="ship-property ship-type">
+          {currentShip && shipTypeToString(currentShip.type)}
         </div>
         <div className="go-button">
           <button
