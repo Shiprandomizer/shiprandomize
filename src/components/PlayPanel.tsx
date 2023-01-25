@@ -4,7 +4,7 @@ import JSConfetti from "js-confetti";
 import { Ship } from "../models/Config";
 import Randomizer from "../service/Randomizer";
 import { ConfigContext } from "../App";
-import { shipTypeToString } from '../models/Config';
+import { shipTypeToString } from "../models/Config";
 const randomizer = new Randomizer();
 const jsConfetti = new JSConfetti();
 

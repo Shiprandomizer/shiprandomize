@@ -25,15 +25,15 @@ export const NationValues = [
   "Pan-America",
   "Pan-Asia",
 ];
-export type Nations = typeof NationValues[number];
+export type Nations = (typeof NationValues)[number];
 
 export const Tiers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] as const;
-export type Tier = typeof Tiers[number];
+export type Tier = (typeof Tiers)[number];
 
 export type Kind = "N" | "P";
 
 export const ShipTypes = ["A", "B", "C", "D", "S"] as const;
-export type ShipType = typeof ShipTypes[number];
+export type ShipType = (typeof ShipTypes)[number];
 
 export interface Config {
   version: number;
