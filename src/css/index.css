@@ -254,7 +254,7 @@
         top: 20vh;
         position: fixed;
         background-color: transparent;
-        background-image: url("../assets/images/subkiller.svg");
+        background-image: url("../assets/images/subkiller.png");
         background-size: cover;
         color: var(--foreground-color);
         padding: 0px;
@@ -269,7 +269,7 @@
         top: 30vh;
         position: fixed;
         background-color: transparent;
-        background-image: url("../assets/images/spacer.svg");
+        background-image: url("../assets/images/spacer.png");
         background-size: cover;
         color: var(--foreground-color);
         padding: 0px;
@@ -284,7 +284,7 @@
         top: 40vh;
         position: fixed;
         background-color: transparent;
-        background-image: url("../assets/images/nere_runs.svg");
+        background-image: url("../assets/images/nere_runs.png");
         background-size: cover;
         color: var(--foreground-color);
         padding: 0px;
