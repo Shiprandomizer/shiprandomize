@@ -22,7 +22,11 @@ function App() {
       <div>
         <div className="logo logo-watermark logo-watermark-left"></div>
         <div className="logo logo-watermark logo-watermark-right"></div>
-        <div className="logo logo-tk logo-tk-bottom"></div>
+        <div className="logo logo-tk logo-tk-bottom">
+        <a href="https://twitch.tv/teamkrado">
+            <button className="buttond logo-tk "></button>
+          </a>
+        </div>
 
         <div className="games games-tk games-tk-right">
           <a href="https://shiprandomizer.de/game/game.html">

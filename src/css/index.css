@@ -246,6 +246,7 @@
         padding: 0px;
         width: 200px;
         height: 80px;
+        cursor: pointer;
     }
     /*neue logos*/
     
@@ -275,7 +276,6 @@
         padding: 0px;
         width: 250px;
         height: 80px;
-        border: none;
         cursor: pointer;
     }
     
