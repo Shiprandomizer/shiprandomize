@@ -23,29 +23,24 @@ function App() {
         <div className="logo logo-watermark logo-watermark-left"></div>
         <div className="logo logo-watermark logo-watermark-right"></div>
         <div className="logo logo-tk logo-tk-bottom"></div>
-        
-        <div className="games games-tk games-tk-right">
-  <a href="https://shiprandomizer.de/game/game.html">
-    <button className="buttona">
-      <img src="../assets/images/games-tk_subkiller.png" alt="Subkiller" />
-    </button>
-  </a>
-</div>
 
+        <div className="games games-tk games-tk-right">
+          <a href="https://shiprandomizer.de/game/game.html">
+            <button className="buttona games-tk"></button>
+          </a>
+        </div>
 
         <div className="games games-tka games-tk-right">
-        <a href="https://shiprandomizer.de/spacer/index.html">
-          <button className="buttonb">
-        <img src="../assets/images/games-tk_spacer.png" alt="Spacer" />
-        </button></a>
-</div>
+          <a href="https://shiprandomizer.de/spacer/index.html">
+            <button className="buttonb games-tka"></button>
+          </a>
+        </div>
 
         <div className="games games-tkb games-tk-right">
-        <a href="https://shiprandomizer.de/teamkrado/index.html">
-          <button className="buttonc">
-        <img src="../assets/images/games-tk_nere_runs.png" alt="Nere Runs" />
-        </button></a>
-</div>
+          <a href="https://shiprandomizer.de/teamkrado/index.html">
+            <button className="buttonc games-tkb"></button>
+          </a>
+        </div>
 
         <PlayPanel />
         <ConfigPanel />

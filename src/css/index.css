@@ -254,11 +254,14 @@
         top: 20vh;
         position: fixed;
         background-color: transparent;
-        background-image: url("../assets/images/games-tk_subkiller.png");
+        background-image: url("../assets/images/subkiller.svg");
+        background-size: cover;
         color: var(--foreground-color);
         padding: 0px;
         width: 250px;
         height: 80px;
+        border: none;
+        cursor: pointer;
     }
     
     .games-tka {
@@ -266,11 +269,14 @@
         top: 30vh;
         position: fixed;
         background-color: transparent;
-        background-image: url("../assets/images/games-tk_spacer.png");
+        background-image: url("../assets/images/spacer.svg");
+        background-size: cover;
         color: var(--foreground-color);
         padding: 0px;
         width: 250px;
         height: 80px;
+        border: none;
+        cursor: pointer;
     }
     
     .games-tkb {
@@ -278,11 +284,14 @@
         top: 40vh;
         position: fixed;
         background-color: transparent;
-        background-image: url("../assets/images/games-tk_nere_runs.png");
+        background-image: url("../assets/images/nere_runs.svg");
+        background-size: cover;
         color: var(--foreground-color);
         padding: 0px;
         width: 250px;
         height: 80px;
+        border: none;
+        cursor: pointer;
     }
     
     @media (max-height: 700px) {
