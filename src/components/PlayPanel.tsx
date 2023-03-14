@@ -62,5 +62,6 @@ export default function PlayPanel() {
       <div className="logo logo-watermark-left"></div>
       <div className="logo logo-watermark-right"></div>
     </div>
+    
   );
 }
