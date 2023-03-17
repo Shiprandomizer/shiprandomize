@@ -45,6 +45,11 @@ function App() {
             <button className="buttonc games-tkb"></button>
           </a>
         </div>
+        <div className="games games-tkc games-tk-right">
+          <a href="https://shiprandomizer.de/downloads/tk-subkiller2.zip">
+            <button className="buttond games-tkb"></button>
+          </a>
+        </div>
 
         <PlayPanel />
         <ConfigPanel />

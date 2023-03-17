@@ -294,6 +294,21 @@
         cursor: pointer;
     }
     
+    .games-tkc {
+        left: calc(60vw + 380px);
+        top: 50vh;
+        position: fixed;
+        background-color: transparent;
+        background-image: url("../assets/images/tk-subkiller2.png");
+        background-size: cover;
+        color: var(--foreground-color);
+        padding: 0px;
+        width: 250px;
+        height: 80px;
+        border: none;
+        cursor: pointer;
+    }
+    
     @media (max-height: 700px) {
         .config-header {
             position: static;
