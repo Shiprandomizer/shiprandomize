@@ -47,7 +47,7 @@ function App() {
         </div>
         <div className="games games-tkc games-tk-right">
           <a href="https://shiprandomizer.de/downloads/tk-subkiller2.zip">
-            <button className="buttond games-tkb"></button>
+            <button className="buttond games-tkc"></button>
           </a>
         </div>
 
