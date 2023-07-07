@@ -23,7 +23,7 @@ function App() {
         <div className="logo logo-watermark logo-watermark-left"></div>
         <div className="logo logo-watermark logo-watermark-right"></div>
         <div className="logo logo-tk logo-tk-bottom">
-        <a href="https://twitch.tv/dpp_larifari">
+        <a href="https://twitch.tv/teamkrado">
             <button className="buttond logo-tk "></button>
           </a>
         </div>
