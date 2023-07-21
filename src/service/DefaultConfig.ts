@@ -1,7 +1,7 @@
 import { Config } from "../models/Config";
 
 const DefaultConfig: Config = {
-  version: 10,
+  version: 11,
   configVisible: false,
   descriptionVisible: true,
   sound: {
@@ -6848,7 +6848,7 @@ const DefaultConfig: Config = {
     {
       name: "Gdansk",
       nation: "Europe",
-      tier: 9,
+      tier: 10,
       type: "D",
       kind: "N",
       torpedos: "y",
