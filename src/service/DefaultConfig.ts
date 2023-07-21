@@ -1,7 +1,7 @@
 import { Config } from "../models/Config";
 
 const DefaultConfig: Config = {
-  version: 11,
+  version: 12,
   configVisible: false,
   descriptionVisible: true,
   sound: {
@@ -6947,7 +6947,7 @@ const DefaultConfig: Config = {
     {
       name: "Castilla",
       nation: "Spain",
-      tier: 910,
+      tier: 10,
       type: "C",
       kind: "N",
       torpedos: "y",
