@@ -3,14 +3,14 @@ export interface Ship {
   nation: string;
   tier: Tier;
   type: ShipType;
-  kind: Kind;
+  //kind: Kind;
   torpedos: string;
   caliber: string;
   id: number;
   selected: boolean;
 }
 
-export const Fields = ["Id", "", "Name", "Nation", "Tier", "Kind", "Type"];
+export const Fields = ["Id", "", "Name", "Nation", "Tier", "--***--", "Type"];
 
 export const NationValues = [
   "U.K.",
@@ -24,13 +24,14 @@ export const NationValues = [
   "Europe",
   "Pan-America",
   "Pan-Asia",
+  "Spain",
 ];
 export type Nations = (typeof NationValues)[number];
 
 export const Tiers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] as const;
 export type Tier = (typeof Tiers)[number];
 
-export type Kind = "N" | "P";
+//export type Kind = "N" | "P";
 
 export const ShipTypes = ["A", "B", "C", "D", "S"] as const;
 export type ShipType = (typeof ShipTypes)[number];
