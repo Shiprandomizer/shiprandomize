@@ -1,7 +1,7 @@
 import { Config } from "../models/Config";
 
 const DefaultConfig: Config = {
-  version: 8,
+  version: 10,
   configVisible: false,
   descriptionVisible: true,
   sound: {
