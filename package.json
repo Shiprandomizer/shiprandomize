@@ -23,7 +23,7 @@
     "@typescript-eslint/parser": "^5.62.0",
     "@vitejs/plugin-react-swc": "^3.3.2",
     "eslint": "^8.46.0",
-    "eslint-config-prettier": "^8.9.0",
+    "eslint-config-prettier": "^8.10.0",
     "eslint-config-standard-with-typescript": "^26.0.0",
     "eslint-plugin-n": "^15.7.0",
     "eslint-plugin-prettier": "^4.2.1",
